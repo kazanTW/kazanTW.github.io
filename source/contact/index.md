@@ -14,6 +14,6 @@ layout: page
 
 ## 聯絡資訊
 - Email：me@kazan.tw
-- [Telegram](https://t.me/kazan_TW)
+- [Telegram](https://t.me/kazan_tw)
 - [GitHub](https://github.com/kazanTW)
 - SNS：偏向個人私領域所以不直接公開。
