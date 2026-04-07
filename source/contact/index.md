@@ -14,7 +14,6 @@ layout: page
 
 ## 聯絡資訊
 - Email：me@kazan.tw
-- [Telegram](https://t.me/volcano4r)
-- [GitHub](https://github.com/kazanV)
-- Slack：可以在 [g0v](https://join.g0v.tw/) #edu、#edu-open 找到我！
+- [Telegram](https://t.me/kazan_TW)
+- [GitHub](https://github.com/kazanTW)
 - SNS：偏向個人私領域所以不直接公開。
