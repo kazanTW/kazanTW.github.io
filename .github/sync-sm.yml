@@ -1,0 +1,42 @@
+name: Sync sm into Hexo site
+
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [update-sm]
+
+permissions:
+  contents: write
+
+jobs:
+  sync-sm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main site
+        uses: actions/checkout@v4
+
+      - name: Clone sm repo
+        run: |
+          git clone --depth=1 https://github.com/kazanTW/sm temp-sm
+
+      - name: Copy sm into Hexo source
+        run: |
+          mkdir -p source/sm
+          cp temp-sm/sm.html source/sm/index.html
+          test -f source/sm/index.html
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add source/sm/index.html
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git commit -m "Sync sm from kazanTW/sm"
+          git push
